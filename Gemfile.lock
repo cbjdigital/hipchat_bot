@@ -8,6 +8,7 @@ GEM
       xmpp4r (~> 0.5.0)
     term-ansicolor (1.0.7)
     thor (0.14.6)
+    whois (2.1.0)
     xmpp4r (0.5)
 
 PLATFORMS
@@ -16,3 +17,4 @@ PLATFORMS
 DEPENDENCIES
   foreman
   robut (~> 0.3.0)
+  whois (~> 2.1.0)
