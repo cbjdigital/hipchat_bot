@@ -6,8 +6,9 @@ class Robut::Plugin::DomainLookup
   
   # Responds with +message+ if the command sent to robut is 'echo'.
   def handle(time, sender_nick, message)
+    words = words(message)
     domains = words(message, 'whois')
-    if sent_to_me?(message)
+    if sent_to_me?(message) && words.first == 'whois'
       domains.each do |domain|
         begin
           reply Whois.query(domain).to_s
@@ -22,7 +23,7 @@ class Robut::Plugin::DomainLookup
 
   # Returns a description of how to use this plugin
   def usage
-    "#{at_nick} whois <domain> - Returns the whois information about a domain"
+    "#{at_nick} whois <domain> [<domain>] - Returns the whois information about a domain"
   end
 
 end
