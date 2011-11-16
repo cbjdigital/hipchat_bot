@@ -14,7 +14,7 @@ Robut::Plugin.plugins << Robut::Plugin::Help
 Robut::Connection.configure do |config|
   config.jid      = ENV["ROBUT_JID"]
   config.password = ENV["ROBUT_PASSWORD"]
-  config.nick     = ENV["ROBUT_NICK"]
+  config.nick     = "Slave Robut"
   config.room     = ENV["ROBUT_ROOM"]
   
   config.logger = Logger.new(STDOUT)
