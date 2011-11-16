@@ -17,10 +17,5 @@ Robut::Connection.configure do |config|
   config.nick     = ENV["ROBUT_NICK"]
   config.room     = ENV["ROBUT_ROOM"]
   
-  # Some plugins require storage
-  # Robut::Storage::YamlStore.file = ".robut"
-  # config.store = Robut::Storage::YamlStore
-  
-  # Add a logger if you want to debug the connection
   config.logger = Logger.new(STDOUT)
 end
